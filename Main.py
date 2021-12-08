@@ -12,8 +12,12 @@ from datetime import datetime
 class Moguding(object):
     def __init__(self, phone: int, password: str, address: str):
         self.loginUrl = 'https://api.moguding.net:9000/session/user/v1/login'
-        self.saveUrl = 'https://api.moguding.net:9000/attendence/clock/v1/save'
-        self.planUrl = 'https://api.moguding.net:9000/practice/plan/v1/getPlanByStu'
+        
+        # self.saveUrl = 'https://api.moguding.net:9000/attendence/clock/v1/save'
+        # self.planUrl = 'https://api.moguding.net:9000/practice/plan/v1/getPlanByStu'
+        
+        self.saveUrl = 'https://api.moguding.net:9000/attendence/clock/v2/save'
+        self.planUrl = 'https://api.moguding.net:9000/practice/plan/v3/getPlanByStu'
         self.phone = phone  # 手机号
         self.password = password  #密码
         self.address = address  #签到地点名
